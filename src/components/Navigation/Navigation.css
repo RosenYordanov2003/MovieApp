@@ -1,0 +1,26 @@
+header{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding-inline: 2.5rem;
+    padding-block: 2rem;
+    justify-content: space-around;
+}
+.navigation-list{
+    display: flex;
+    align-items: center;
+    gap: 2.5rem;
+}
+.navigation-list li a {
+    text-decoration: none;
+    color: black;
+    font-weight: bolder;
+}
+.header-logo{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.header-logo-title{
+    margin: 0;
+}
