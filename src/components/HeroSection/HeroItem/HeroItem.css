@@ -1,0 +1,83 @@
+.movie-item{
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    padding: 5rem 9rem;
+    position: relative;
+    height: 100vh;
+}
+.movie-item::before,
+.movie-item::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.movie-item-poster{
+    width: 480px;
+    height: 100%;
+}
+
+.movie-item .movie-item-poster img{
+    width: 100%;
+    height: auto;
+}
+.movie-item-about-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: 5rem;
+    position: relative;
+    z-index: 4;
+}
+.movie-item-about-container :where(.movie-item-title, .movie-item-description){
+    color: white;
+    font-weight: bolder;
+}
+.movie-item-description{
+    width: 55%;
+    font-size: 1.1rem;
+    line-height: 1.7;
+}
+.movie-item-title{
+    font-size: 5rem;
+    margin-bottom: 2rem;
+    line-height: 1.4;
+}
+.movie-item-btn-container{
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+}
+.movie-item-btn-container :where(.watch-now-btn, .watch-trailer-btn){
+    width: 300px;
+    border: none;
+    padding: 0.4rem 0.8rem;
+    border-radius: 1rem;
+    font-size: 1.2rem;
+    font-weight: bolder;
+    color: white;
+}
+.watch-now-btn{
+    background-color: red;
+    transition: 0.3s ease-in all;
+}
+.watch-now-btn:hover{
+    opacity: 0.8;
+    transform: scale(1.050);
+}
+.watch-trailer-btn{
+    background-color: transparent;
+    border: 3px solid white;
+    transition: 0.3s ease-in all;
+}
+.watch-trailer-btn:hover{
+    background-color: white;
+    color: black;
+}

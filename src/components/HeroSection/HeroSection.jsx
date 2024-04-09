@@ -4,7 +4,7 @@ import "../HeroSection/HeroSection.css";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import { Autoplay} from 'swiper/modules';
-import apiConfig from "../../api";
+import HeroItem from "./HeroItem/HeroItem";
 
 export default function HeroSection(){
 
@@ -16,7 +16,9 @@ export default function HeroSection(){
    }, [])
 
    const result = movieObject?.results?.slice(0, 4).map((m, index) => {
-     return <SwiperSlide key={index}><img src={apiConfig.getMovieImg(m.backdrop_path)}></img></SwiperSlide>;
+     return <SwiperSlide key={index}>
+        <HeroItem movie={m}/>
+     </SwiperSlide>;
    });
 
    

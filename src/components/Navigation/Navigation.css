@@ -32,4 +32,8 @@ header{
 }
 .header-logo-title{
     margin: 0;
+    font-size: 2rem;
+}
+.header-logo i{
+    font-size: 2rem;
 }
