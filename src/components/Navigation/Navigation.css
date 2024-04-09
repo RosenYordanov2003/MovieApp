@@ -5,6 +5,9 @@ header{
     padding-inline: 2.5rem;
     padding-block: 2rem;
     justify-content: space-around;
+    position: fixed;
+    top: 0;
+    z-index: 3;
 }
 .navigation-list{
     display: flex;
@@ -13,13 +16,19 @@ header{
 }
 .navigation-list li a {
     text-decoration: none;
-    color: black;
+    color: white;
     font-weight: bolder;
+    font-size: 1.5rem;
+    transition: color 0.2s ease-in;
 }
+.navigation-list li:hover:not(:last-child) a{
+    color: red;
+}   
 .header-logo{
     display: flex;
     align-items: center;
     gap: 1rem;
+    color: white;
 }
 .header-logo-title{
     margin: 0;

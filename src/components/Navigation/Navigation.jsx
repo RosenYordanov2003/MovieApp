@@ -6,7 +6,7 @@ export default function Navigation(){
         <header>
              <div className="header-logo">
                  <h3 className="header-logo-title">Movies For You</h3>    
-                 <i class="fa-solid fa-video"></i>
+                 <i className="fa-solid fa-video"></i>
             </div>
             <nav className="navigation">
                 <ul className="navigation-list">
@@ -17,7 +17,7 @@ export default function Navigation(){
                         <Link to="Library">Library</Link>
                     </li>
                     <li>
-                      <Link to="Cart">Cart</Link>
+                      <Link to="Cart"><i class="fa-solid fa-cart-shopping"></i></Link>
                     </li>
                 </ul>
             </nav>
