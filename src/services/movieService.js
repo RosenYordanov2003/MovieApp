@@ -18,3 +18,18 @@ export async function loadHeroSectionMovie(pageNumber){
 
     return response;
 }
+export async function getMovieVideos(movieId){
+  const options = {
+    method: 'GET',
+    headers: {
+      accept: 'application/json',
+      Authorization: `Bearer ${bearerToken}`
+    }
+  };
+  
+  const request = await fetch(`https://api.themoviedb.org/3/movie/${movieId}/videos?language=en-US`, options);
+
+  const response = await request.json();
+
+  return response;
+}

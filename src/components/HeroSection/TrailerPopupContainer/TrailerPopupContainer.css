@@ -1,0 +1,27 @@
+.trailer-container{
+    width: 90%;
+    height: auto;
+    position: absolute;
+    z-index: 5;
+    transform: translate(-50%, -50%) scale(0);
+    top: 50%;
+    left: 50%;
+    background-color: rgb(0, 0, 0, 1);
+    padding-block: 1rem;
+    transition-delay: 0.5s;
+    transition: transform 0.3s ease-in;
+}
+.trailer-container.active-video{
+    transform: translate(-50%, -50%) scale(1);
+}
+.close-video{
+    font-size: 1.5rem;
+    color: white;
+    position: absolute;
+    top: 0.5rem;
+    right: 0.6rem;
+    transition: opacity 0.3s ease-in;
+}
+.close-video:hover{
+    opacity: 0.7;
+}
