@@ -15,16 +15,18 @@ export default function HeroSection(){
       .catch((error) => console.error(error));
    }, [])
 
-   const result = movieObject?.results?.slice(0, 4).map((m, index) => {
+   const result = movieObject?.results?.slice(0, 8).map((m, index) => {
      return <SwiperSlide key={index}>
-        <HeroItem movie={m}/>
-     </SwiperSlide>;
+         {({ isActive }) => (
+             <HeroItem movie={m} className={`${isActive ? "active" : ""}`} />
+         )}
+     </SwiperSlide>
    });
 
    
    return (
       <section className="hero-section">
-        <Swiper
+      <Swiper
         slidesPerView={1}
           centeredSlides={true}
           autoplay={{

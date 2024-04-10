@@ -1,10 +1,12 @@
 import "../HeroItem/HeroItem.css";
 import apiConfig from "../../../api";
+import { useState, useEffect } from "react";
 
-export default function HeroItem({movie}){
-    const backgroundImg = apiConfig.getMovieImg(movie.backdrop_path ? movie.backdrop_path : movie.poster_path);
+export default function HeroItem({movie, className}){
+  
+  const backgroundImg = apiConfig.getMovieImg(movie.backdrop_path ? movie.backdrop_path : movie.poster_path);
    return(
-     <article className="movie-item" style={{backgroundImage: `url(${backgroundImg})`}}>
+     <article className={`movie-item ${className}`} style={{backgroundImage: `url(${backgroundImg})`}}>
          <section className="movie-item-about-container">
             <div className="movie-item-about">
                 <h1 className="movie-item-title">{movie.title}</h1>
