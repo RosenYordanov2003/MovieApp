@@ -1,19 +1,20 @@
 import './App.css';
-import { BrowserRouter } from "react-router-dom";
+import {BrowserRouter ,Routes, Route } from "react-router-dom";
 import Navigation from './components/Navigation/Navigation';
-import HeroSection from './components/HeroSection/HeroSection';
-import TrendingMoviesSection from './components/TrendingMoviesSection/TrendingMoviesSection';
+import HomeSection from './components/HomeSection/HomeSection';
+import MediaList from "../src/components/MediaList/MediaList";
 
 function App() {
   return (
-    <BrowserRouter>
-      <Navigation/>
-      <HeroSection/>
-      <TrendingMoviesSection category={'movie'} title={"Popular Movies"} criteria={'popular'}/>
-      <TrendingMoviesSection category={'tv'} title={"Popular TV Shows"} criteria={'popular'}/>
-      <TrendingMoviesSection category={'movie'} title={"Upcoming Movies"} criteria={'upcoming'}/>
-    </BrowserRouter>
+    <>
+      <BrowserRouter>
+        <Navigation/>
+        <Routes>
+          <Route path='/Movies/:category' element={<MediaList/>}/>
+          <Route path="/" element={<HomeSection/>} />
+        </Routes>
+      </BrowserRouter>
+    </>
   );
 }
-
 export default App;

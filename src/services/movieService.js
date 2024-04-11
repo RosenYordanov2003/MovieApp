@@ -1,6 +1,6 @@
 const bearerToken = process.env.REACT_APP_BEARER_TOKEN;
 
-export async function loadPopularMovies(pageNumber, category, criteria){
+export async function loadPopularMediaList(pageNumber, category, criteria){
    const baseUrl = `https://api.themoviedb.org/3/${category}/${criteria}?language=en-US&`;
     if(!pageNumber || pageNumber === null){
         pageNumber = 1

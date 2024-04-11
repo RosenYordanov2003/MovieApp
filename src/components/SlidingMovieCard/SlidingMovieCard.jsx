@@ -1,5 +1,5 @@
 import "../SlidingMovieCard/SlidingMovieCard.css";
-import apiConfig from "../../api";
+import apiConfig from "../../utilities";
 
 export default function SlidingMovieCard({movie}){
     const imgPath = apiConfig.getMovieImg(movie.poster_path);

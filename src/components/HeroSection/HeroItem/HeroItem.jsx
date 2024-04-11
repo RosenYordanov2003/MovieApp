@@ -1,5 +1,5 @@
 import "../HeroItem/HeroItem.css";
-import apiConfig from "../../../api";
+import apiConfig from "../../../utilities";
 import TrailerPopupContainer from "../TrailerPopupContainer/TrailerPopupContainer";
 import { useEffect, useState } from "react";
 import {getMovieVideos} from "../../../services/movieService";

@@ -1,0 +1,29 @@
+.media-list-container{
+    background-color: black;
+    margin-top: 7rem;
+    padding: 2rem 4rem;
+}
+.media-list-title{
+    color: white;
+    font-size: 3rem;
+    text-align: center;
+}
+.media-list-content{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 2rem;
+}
+.load-more-button{
+    border:none;
+    background-color: white;
+    color: red;
+    padding: 0.6rem 1rem;
+    border-radius: 1rem;
+    font-size: 1.1rem;
+    font-weight: bolder;
+    width: 200px;
+    transition: opacity 0.3s ease-in;
+}
+.load-more-button:hover{
+    opacity: 0.6;
+}

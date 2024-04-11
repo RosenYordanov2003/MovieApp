@@ -1,5 +1,5 @@
 import { useEffect, useState, useRef } from "react";
-import {loadPopularMovies} from "../../services/movieService";
+import {loadPopularMediaList} from "../../services/movieService";
 import "../HeroSection/HeroSection.css";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
@@ -11,7 +11,7 @@ export default function HeroSection(){
   const ref = useRef();
    const[movieObject, setMovieObject] = useState(undefined);
    useEffect(() => {
-      loadPopularMovies(1, 'movie', 'popular')
+    loadPopularMediaList(1, 'movie', 'popular')
       .then(res => setMovieObject(res))
       .catch((error) => console.error(error));
    }, [])

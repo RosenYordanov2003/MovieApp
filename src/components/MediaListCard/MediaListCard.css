@@ -1,0 +1,13 @@
+.media-item-img-container{
+    width: 220px;
+    height: auto;
+}
+.media-item-img-container img{
+    width: 100%;
+    height: auto;
+    border-radius: 1.1rem;
+}
+.media-item-title{
+    color: white;
+    font-size: 1.7rem;
+}
