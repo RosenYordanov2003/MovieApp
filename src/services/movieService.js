@@ -1,7 +1,7 @@
 const bearerToken = process.env.REACT_APP_BEARER_TOKEN;
-const baseUrl = `https://api.themoviedb.org/3/movie/popular?language=en-US&`;
 
-export async function loadHeroSectionMovie(pageNumber){
+export async function loadPopularMovies(pageNumber, category, criteria){
+   const baseUrl = `https://api.themoviedb.org/3/${category}/${criteria}?language=en-US&`;
     if(!pageNumber || pageNumber === null){
         pageNumber = 1
     }

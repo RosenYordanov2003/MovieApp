@@ -17,7 +17,7 @@ export default function Navigation(){
                         <Link to="Library">Library</Link>
                     </li>
                     <li>
-                      <Link to="Cart"><i class="fa-solid fa-cart-shopping"></i></Link>
+                      <Link to="Cart"><i className="fa-solid fa-cart-shopping"></i></Link>
                     </li>
                 </ul>
             </nav>

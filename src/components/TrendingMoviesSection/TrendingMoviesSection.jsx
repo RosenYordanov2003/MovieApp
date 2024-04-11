@@ -5,20 +5,20 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import SlidingMovieCard from "../SlidingMovieCard/SlidingMovieCard";
 import { Autoplay} from 'swiper/modules';
 
-export default function TrendingMoviesSection(){
+export default function TrendingMoviesSection({category, title, criteria}){
   const [movies, setMovies] = useState([]);
   useEffect(() => {
-   loadPopularMovies(1)
-   .then(res => setMovies(res.results))
+   loadPopularMovies(1, category, criteria)
+   .then(res => setMovies(res.results, criteria))
   },[])
-  const movieItems = movies.map((m, index) => {
+  const movieItems = movies?.map((m, index) => {
      return <SwiperSlide key={index}>
          <SlidingMovieCard movie={m}/>
      </SwiperSlide>
   })
   return(
     <section className="trending-movies">
-      <h1 className="trending-movies-title">Trending Movies</h1>
+      <h1 className="trending-movies-title">{title}</h1>
       <Swiper
          grabCursor={true}
          spaceBetween={10}
