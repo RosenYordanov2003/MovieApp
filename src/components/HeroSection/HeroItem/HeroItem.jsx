@@ -11,7 +11,7 @@ export default function HeroItem({movie, className, onStopPlayer, onResumePlayer
 
   useEffect(() => {
     getMovieVideos(movie.id)
-    .then((res) => setMovieVideos(res.results));
+    .then((res) => setMovieVideos(res.results.filter(v => v.name.toLowerCase().startsWith('official trailer'))));
   },[])
 
   function onVideoRemove(){
