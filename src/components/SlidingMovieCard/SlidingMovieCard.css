@@ -1,0 +1,13 @@
+.sliding-movie-card-img-container{
+   width: 84%;
+   height: auto;
+}
+.sliding-movie-card-img-container img{
+    width: 100%;
+    height: auto;
+    border-radius: 1.4rem;
+}
+.sliding-movie-card-name{
+    color: white;
+    font-size: 1.7rem;
+}
