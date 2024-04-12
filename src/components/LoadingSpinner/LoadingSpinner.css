@@ -1,0 +1,22 @@
+.loading-spinner {
+    transform:translate(-50%, -50%);
+    width: 240px;
+    height: 240px;
+    background-color: transparent;
+    border-radius: 50%;
+    border: 12px solid #e3e3e3;
+    border-right-color: #4070f4;
+    animation: spin 2s ease-in-out infinite;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+@keyframes spin {
+    50% {
+        transform: translate(-50%, -50%) rotate(180deg);
+    }
+
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
