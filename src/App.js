@@ -11,6 +11,7 @@ function App() {
         <Navigation/>
         <Routes>
           <Route path='/Movies/:category' element={<MediaList/>}/>
+          <Route path="/Home" element={<HomeSection/>} />
           <Route path="/" element={<HomeSection/>} />
         </Routes>
       </BrowserRouter>
