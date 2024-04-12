@@ -29,6 +29,9 @@ export default function Navigation(){
                     <li>
                         <Link to="/Movies/movie">Movies</Link>
                     </li>
+                    <li>
+                        <Link to="/Movies/tv">TV Shows</Link>
+                    </li>
                 </ul>
             </nav>
         </header>

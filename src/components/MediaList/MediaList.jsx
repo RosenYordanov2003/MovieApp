@@ -28,7 +28,8 @@ export default function MediaList(){
         loadMediaItemsByQueryString(1, true);
       }
       if(pagerObject.pageNumber + 1 <=pagerObject.totalPages){
-         loadPopular(1);
+        setIsLoading(true);
+        loadPopular(1, true);
       }
     }
     function loadPopular(pageNumberToAdd, itHasToSaveOldMovies){
@@ -41,9 +42,7 @@ export default function MediaList(){
           setMediaListItems(res.results);
         }
         setPagerObject({pageNumber: pagerObject.pageNumber + pageNumberToAdd, totalPages: res.total_pages});
-        if(isLoading){
-          setIsLoading(false);
-        }
+        setIsLoading(false);
       })
     }
     function loadMediaItemsByQueryString(pageNumberToAdd, itHasToSaveOldMovies){
@@ -80,7 +79,7 @@ export default function MediaList(){
            {!isLoading ? result : <LoadingSpinner/>}
          </section>
          {
-           pagerObject.pageNumber + 1 <= pagerObject.totalPages &&  
+           (pagerObject.pageNumber + 1 <= pagerObject.totalPages &&  !isLoading) &&
            <button onClick={handleOnLoadMoreClick} className="load-more-button">Load More</button>
          }
         </div>
