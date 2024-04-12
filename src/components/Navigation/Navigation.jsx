@@ -24,7 +24,7 @@ export default function Navigation(){
             <nav className="navigation">
                 <ul className="navigation-list">
                     <li>
-                       <Link to="/">Home</Link>
+                       <Link to="/Home">Home</Link>
                     </li>
                     <li>
                         <Link to="/Movies/movie">Movies</Link>

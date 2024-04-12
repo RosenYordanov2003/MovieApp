@@ -2,7 +2,7 @@ import "../SlidingMovieCard/SlidingMovieCard.css";
 import apiConfig from "../../utilities";
 
 export default function SlidingMovieCard({movie}){
-    const imgPath = apiConfig.getMovieImg(movie.poster_path);
+    const imgPath = apiConfig.getMovieImg(movie.poster_path !== null ? movie.poster_path:movie.backdrop_path);
     return(
         <article className="sliding-movie-card">
             <div className="sliding-movie-card-img-container">

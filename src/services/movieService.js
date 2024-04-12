@@ -33,3 +33,18 @@ export async function getMovieVideos(movieId){
 
   return response;
 }
+export async function searchCollection(queryString, pageNumber){
+  const options = {
+    method: 'GET',
+    headers: {
+      accept: 'application/json',
+      Authorization: `Bearer ${bearerToken}`
+    }
+  };
+  
+  const request = await fetch(`https://api.themoviedb.org/3/search/collection?query=${queryString}&include_adult=false&language=en-US&page=${pageNumber}`, options);
+
+  const response = request.json();
+
+  return response;
+}

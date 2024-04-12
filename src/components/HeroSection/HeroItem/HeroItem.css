@@ -7,7 +7,7 @@
     position: relative;
     height: 100vh;
 }
-.movie-item::before,
+
 .movie-item::after{
     content: "";
     position: absolute;
@@ -16,7 +16,7 @@
     width: 100%;
     height: 100%;
     z-index: 2;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-image: linear-gradient(to top, #0f0f0f, rgba(0, 0, 0, 0.5));
 }
 
 .movie-item-poster{
