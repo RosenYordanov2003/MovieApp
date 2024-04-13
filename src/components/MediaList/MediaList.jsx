@@ -66,7 +66,7 @@ export default function MediaList(){
         setQueryString(queryStringToSet);
       }
     }
-    const result = mediaListItems.map((x, index) => <MediaListCard key={index} mediaItem={x}/>);
+    const result = mediaListItems.map((x, index) => <MediaListCard key={index} mediaItem={x} category={category}/>);
     const styleObject = {backgroundImage: `url(${MediaListBG})`};
     return (
      <>

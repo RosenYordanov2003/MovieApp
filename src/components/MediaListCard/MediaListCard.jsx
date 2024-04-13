@@ -1,10 +1,12 @@
 import "../MediaListCard/MediaListCard.css";
 import apiConfig from "../../utilities";
+import {useNavigate} from "react-router-dom"
 
-export default function MediaListCard({mediaItem}){
+export default function MediaListCard({mediaItem, category}){
+   const navigate = useNavigate();
    const imgPath = apiConfig.getMovieImg(mediaItem.poster_path !== null ? mediaItem.poster_path :mediaItem.backdrop_path);
    return(
-     <article className="media-item-card">
+     <article onClick={() => navigate(`/Details/${category}/${mediaItem.id}`)} className="media-item-card">
         <div className="media-item-img-container">
            <img src={imgPath}></img>
         </div>

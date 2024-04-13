@@ -48,3 +48,33 @@ export async function searchCollection(queryString, pageNumber){
 
   return response;
 }
+export async function getDetails(category, id){
+  const options = {
+    method: 'GET',
+    headers: {
+      accept: 'application/json',
+      Authorization: `Bearer ${bearerToken}`
+    }
+  };
+  
+  const request = await fetch(`https://api.themoviedb.org/3/${category}/${id}?language=en-US`, options);
+
+  const response = await request.json();
+  
+  return response;
+}
+export async function getCasts(category, id){
+    const options = {
+        method: 'GET',
+        headers: {
+        accept: 'application/json',
+        Authorization: `Bearer ${bearerToken}`
+      }
+  };
+  
+    const request = await fetch(`https://api.themoviedb.org/3/${category}/${id}/credits?language=en-US`, options);
+
+    const response = await request.json();
+
+    return response;
+}
