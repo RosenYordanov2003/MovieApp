@@ -1,3 +1,5 @@
+import { findByAltText } from "@testing-library/react";
+
 const bearerToken = process.env.REACT_APP_BEARER_TOKEN;
 
 export async function loadPopularMediaList(pageNumber, category, criteria){
@@ -77,4 +79,19 @@ export async function getCasts(category, id){
     const response = await request.json();
 
     return response;
+}
+export async function getVideos(category, id){
+  const options = {
+    method: 'GET',
+    headers: {
+      accept: 'application/json',
+      Authorization: `Bearer ${bearerToken}`
+    }
+  };
+  
+  const request = await fetch(`https://api.themoviedb.org/3/${category}/${id}/videos?language=en-US`, options);
+
+  const response = await request.json();
+
+  return response;
 }

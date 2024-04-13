@@ -1,0 +1,11 @@
+.cast-img-container{
+    width: 100px;
+    height: auto;
+}
+.cast-img-container img{
+    width: 100%;
+    height: auto;
+}
+.cast-name{
+    color: white;
+}

@@ -73,4 +73,17 @@
     line-height: 1.5;
     margin-top: 2.1rem;
 }
+.cast-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
+    gap: 1.1rem;
+}
+.media-item-videos{
+    padding-inline: 2.5rem;
+    margin-top: 1.5rem;
+    padding-bottom: 3rem;
+}
+.media-item-videos .media-video-container:not(:last-child){
+    margin-bottom: 4rem;
+}
 
