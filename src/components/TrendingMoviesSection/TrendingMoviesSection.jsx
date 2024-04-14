@@ -7,8 +7,9 @@ import { Autoplay} from 'swiper/modules';
 
 export default function TrendingMoviesSection({category, title, criteria}){
   const [movies, setMovies] = useState([]);
+  const defaultPage = 1;
   useEffect(() => {
-    loadPopularMediaList(1, category, criteria)
+    loadPopularMediaList(defaultPage, category, criteria)
    .then(res => setMovies(res.results, criteria))
   },[])
   const movieItems = movies?.map((m, index) => {

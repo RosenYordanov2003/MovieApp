@@ -75,8 +75,8 @@
 }
 .cast-container{
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
-    gap: 1.1rem;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 2.2rem;
 }
 .media-item-videos{
     padding-inline: 2.5rem;
@@ -85,5 +85,15 @@
 }
 .media-item-videos .media-video-container:not(:last-child){
     margin-bottom: 4rem;
+}
+.similar-title{
+    font-size: 2.5rem;
+    color: white;
+    padding-left: 2.5rem;
+    margin-top: 3rem;
+}
+.similar-container{
+    padding-inline: 2.5rem;
+    padding-bottom: 3rem;
 }
 

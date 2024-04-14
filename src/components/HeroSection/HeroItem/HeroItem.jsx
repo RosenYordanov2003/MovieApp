@@ -3,11 +3,13 @@ import apiConfig from "../../../utilities";
 import TrailerPopupContainer from "../TrailerPopupContainer/TrailerPopupContainer";
 import { useEffect, useState } from "react";
 import {getMovieVideos} from "../../../services/movieService";
+import { useNavigate } from "react-router-dom";
 
 export default function HeroItem({movie, className, onStopPlayer, onResumePlayer}){
 
   const[trailer, setTrailer] = useState(undefined);
   const[movieVideos, setMovieVideos] = useState([]);
+  const navigate = useNavigate();
 
   useEffect(() => {
     getMovieVideos(movie.id)
