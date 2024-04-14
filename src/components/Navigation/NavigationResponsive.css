@@ -1,0 +1,34 @@
+@media screen and (max-width: 700px) {
+    .header-logo{
+        display: none;
+    }
+    header{
+        height: 80%;
+        padding: unset;
+    }
+    .navigation{
+        width: 100%;
+        height: 80%;
+        background-color: black;
+        position: absolute;
+        top: 0;
+        z-index: 1;
+        transform: translateY(-200%);
+        transition: transform ease-in 0.6s;
+    }
+    .navigation-list{
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+        justify-content: center;
+    }
+    .menu-icon{
+        display: block;
+    }
+    header:has(.closed) .navigation{
+        transform: translateY(0);
+    }
+    header.active-header{
+        background-color: unset;
+    }
+}

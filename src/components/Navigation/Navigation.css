@@ -40,3 +40,33 @@ header.active-header{
 .header-logo i{
     font-size: 2rem;
 }
+
+.menu-icon-bar {
+    width: 30px;
+    height: 4px;
+    background-color: white;
+    margin: 6px 0;
+    transition: 0.3s ease-in-out;
+}
+.menu-icon{
+    position: fixed;
+    right: 0.4rem;
+    top: 1.4rem;
+    cursor: pointer;
+    padding: 0.4rem 0.5rem;
+    z-index: 3;
+    display: none;
+}
+.closed .third-bar{
+    opacity: 0;
+    display: none;
+}
+.closed .first-bar {
+    margin: 0px;
+    transform: rotate(-45deg) translateX(-4px);
+}
+
+.closed .second-bar {
+    margin: 0px;
+    transform: rotate(45deg) translateX(-2px);
+}
