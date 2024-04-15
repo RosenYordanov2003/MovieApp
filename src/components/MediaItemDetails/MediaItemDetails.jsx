@@ -26,6 +26,7 @@ export default function MediaItemDetails(){
       .then(res => setVideos(res.results))
       getSimilar(category, id)
       .then(res => setSimilarMovies(res?.results?.filter(x => x.backdrop_path!== null || x.poster_path!==null)));
+      window.scrollTo(0, 0);
     },[category, id])
 
     const imgPath = item?.backdrop_path || item?.poster_path;
@@ -38,7 +39,7 @@ export default function MediaItemDetails(){
     const videosResult = videos.map((x) => <Video item={x} id={x.id}/>);
     const similarResult = similarMovies.map((x) => {
         return <SwiperSlide key={x.id}>
-            <SlidingMovieCard movie={x}/>
+            <SlidingMovieCard movie={x} category={category}/>
         </SwiperSlide>
     } )
 

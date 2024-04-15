@@ -38,7 +38,7 @@ export default function HeroItem({movie, className, onStopPlayer, onResumePlayer
                 <h1 className="movie-item-title">{movie.title}</h1>
                 <p className="movie-item-description">{movie.overview}</p>
                 <div className="movie-item-btn-container">
-                    <button className="watch-now-btn">Watch Now</button>
+                    <button onClick={() => navigate(`/Details/movie/${movie.id}`)} className="watch-now-btn">Watch Now</button>
                     <button className="watch-trailer-btn" onClick={handleOnTrailerClick}>Watch Trailer</button>
                 </div>
             </div>

@@ -15,7 +15,7 @@ export default function TrendingMoviesSection({category, title, criteria}){
   },[])
   const movieItems = movies?.map((m, index) => {
      return <SwiperSlide key={index}>
-         <SlidingMovieCard movie={m}/>
+         <SlidingMovieCard movie={m} category={category}/>
      </SwiperSlide>
   })
   return(
