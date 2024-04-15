@@ -1,4 +1,5 @@
 import "../MediaItemDetails/MediaItemDetails.css";
+import "../MediaItemDetails/MediaItemDetailsResponsive.css";
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import {getDetails, getCasts, getVideos, getSimilar} from "../../services/movieService";

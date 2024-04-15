@@ -1,5 +1,6 @@
 import apiConfig from "../../../utilities"
 import "./Cast.css";
+import "./CastResponsive.css";
 
 export default function Cast({cast}){
 

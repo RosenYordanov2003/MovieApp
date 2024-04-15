@@ -1,5 +1,6 @@
 import ReactPlayer from 'react-player/youtube'
 import "../Video/Video.css";
+import "../Video/VideoResponsive.css";
 
 export default function Video({item}){
     const url = 'https://www.youtube.com/embed/' + item.key;
