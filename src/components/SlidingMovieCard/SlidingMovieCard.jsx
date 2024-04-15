@@ -1,4 +1,5 @@
 import "../SlidingMovieCard/SlidingMovieCard.css";
+import "../SlidingMovieCard/SlidingMovieCardResponsive.css";
 import apiConfig from "../../utilities";
 
 export default function SlidingMovieCard({movie}){

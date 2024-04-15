@@ -1,4 +1,5 @@
 import "./TrendingMoviesSection.css";
+import "./TrendingMoviesSectionResponsive.css";
 import {loadPopularMediaList} from "../../services/movieService";
 import { useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from 'swiper/react';
