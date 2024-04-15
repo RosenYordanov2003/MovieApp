@@ -16,7 +16,7 @@ export default function HeroSection(){
       .catch((error) => console.error(error));
    }, [])
    const autoPlayer = ref.current?.swiper?.autoplay;
-   const result = movieObject?.results?.slice(0, 6).map((m, index) => {
+   const result = movieObject?.results?.slice(0, 1).map((m, index) => {
      return <SwiperSlide key={index}>
          {({ isActive }) => (
              <HeroItem movie={m} onResumePlayer={resumePlayer} onStopPlayer={stopPlayer} className={`${isActive ? "active" : ""}`} />

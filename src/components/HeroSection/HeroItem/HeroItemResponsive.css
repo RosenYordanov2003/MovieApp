@@ -1,0 +1,23 @@
+@media  screen and (max-width: 700px) {
+    .movie-item{
+        padding-inline: 2rem;
+    }
+    .movie-item-btn-container{
+        flex-direction: column;
+    }
+    .movie-item-title{
+        font-size: 2.4rem;
+    }
+    .movie-item-description{
+        width: 90%;
+    }
+    .movie-item-poster{
+        display: none;
+    }
+    .movie-item-about-container{
+        display: block;
+    }
+    .movie-item-btn-container button{
+        width: 90%;
+    }
+}

@@ -1,4 +1,5 @@
 import "../HeroItem/HeroItem.css";
+import "../HeroItem/HeroItemResponsive.css";
 import apiConfig from "../../../utilities";
 import TrailerPopupContainer from "../TrailerPopupContainer/TrailerPopupContainer";
 import { useEffect, useState } from "react";
