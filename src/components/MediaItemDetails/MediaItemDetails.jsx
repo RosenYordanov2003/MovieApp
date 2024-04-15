@@ -53,7 +53,6 @@ export default function MediaItemDetails(){
              <LazyLoadImage
                effect="blur"
                src={posterImg}
-               className="details-poster" 
             />
             </div>
               <div className="details-card-about">
