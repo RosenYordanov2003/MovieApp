@@ -1,8 +1,18 @@
 @media screen and (max-width: 700px) {
     .trending-movies-title{
         font-size: 1.7rem;
+        margin-bottom: 2.2rem;
     }
     .swiper-slide{
-        width: 80%;
+        width: 60%;
+    }
+}
+@media screen and (min-width: 701px) and (max-width: 1100px) {
+    .swiper-slide{
+        width: 70%;
+    }
+    .trending-movies-title{
+        font-size: 1.7rem;
+        margin-bottom: 3rem;
     }
 }

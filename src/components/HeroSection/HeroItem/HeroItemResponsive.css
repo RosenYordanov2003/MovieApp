@@ -21,3 +21,25 @@
         width: 90%;
     }
 }
+@media screen and (min-width: 701px) and (max-width: 1100px) {
+    .movie-item-btn-container{
+        flex-direction: column;
+    }
+    .movie-item-title{
+        font-size: 3.8rem;
+        text-align: center;
+    }
+    .movie-item{
+        padding-inline: 4rem;
+        height: auto;
+    }
+    .movie-item-about-container{
+       flex-direction: column-reverse;
+    }
+    .movie-item-poster{
+        width: 350px;
+    }
+    .movie-item-description{
+        width: 96%;
+    }
+}
