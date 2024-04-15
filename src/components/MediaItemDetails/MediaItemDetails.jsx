@@ -11,8 +11,10 @@ import { Autoplay} from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import 'react-lazy-load-image-component/src/effects/blur.css';
+import { useNavigate } from "react-router-dom";
 
 export default function MediaItemDetails(){
+    const navigate = useNavigate();
     const {category, id} = useParams();
     const [casts, setCasts] = useState([]);
     const [item, setItem] = useState(undefined);
@@ -21,9 +23,16 @@ export default function MediaItemDetails(){
 
     useEffect(() => {
       getDetails(category, id)
-      .then(res => setItem(res))
+      .then(res => {
+         if(res.success === false){
+           navigate("/NotFound");
+         }
+         else{
+            setItem(res);
+         }
+      })
        getCasts(category, id)
-      .then(res => setCasts(res.cast.slice(0, 5)))
+      .then(res => setCasts(res?.cast?.slice(0, 5)))
       getVideos(category, id)
       .then(res => setVideos(res.results))
       getSimilar(category, id)
@@ -36,10 +45,10 @@ export default function MediaItemDetails(){
     const posterImg = apiConfig.getPosterImg(imgPath);
 
     const styleObject ={backgroundImage: `url(${backgroundImg})`};
-    const genresResult = item?.genres.map((g, index) => <li key={index}>{g.name}</li>);
-    const castsResult = casts.map((c) => <Cast key={c.id} cast={c}/>);
-    const videosResult = videos.map((x) => <Video item={x} id={x.id}/>);
-    const similarResult = similarMovies.map((x) => {
+    const genresResult = item?.genres?.map((g, index) => <li key={index}>{g.name}</li>);
+    const castsResult = casts?.map((c) => <Cast key={c.id} cast={c}/>);
+    const videosResult = videos?.map((x) => <Video item={x} id={x.id}/>);
+    const similarResult = similarMovies?.map((x) => {
         return <SwiperSlide key={x.id}>
             <SlidingMovieCard movie={x} category={category}/>
         </SwiperSlide>

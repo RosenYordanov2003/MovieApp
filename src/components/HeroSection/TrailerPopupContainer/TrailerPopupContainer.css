@@ -19,7 +19,7 @@
     color: white;
     position: absolute;
     top: 0.5rem;
-    right: 0.6rem;
+    right: 0;
     transition: opacity 0.3s ease-in;
     padding: 1rem;
 }

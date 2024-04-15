@@ -1,0 +1,11 @@
+body{
+    background-color: black;
+}
+.not-found-title{
+    color: white;
+    font-size: 2.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
