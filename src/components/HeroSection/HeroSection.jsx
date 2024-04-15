@@ -37,7 +37,6 @@ export default function HeroSection(){
           centeredSlides={true}
           autoplay={{
             delay: 3500,
-            paused: true
           }}
           modules={[Autoplay]}
           className="swiper"

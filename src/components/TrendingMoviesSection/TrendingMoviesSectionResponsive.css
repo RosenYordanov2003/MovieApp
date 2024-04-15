@@ -15,4 +15,10 @@
         font-size: 1.7rem;
         margin-bottom: 3rem;
     }
+    .trending-movies{
+        margin-top: 10rem;
+    }
+    body{
+        background-color: black;
+    }
 }

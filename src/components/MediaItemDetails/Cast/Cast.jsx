@@ -1,6 +1,8 @@
 import apiConfig from "../../../utilities"
 import "./Cast.css";
 import "./CastResponsive.css";
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
 
 export default function Cast({cast}){
 
@@ -8,7 +10,10 @@ export default function Cast({cast}){
     return (
         <article className="cast-card">
             <div className="cast-img-container">
-                <img loading="lazy" src={imgPath}></img>
+        <LazyLoadImage
+           effect="blur"
+           src={imgPath} 
+         />
             </div>
             <h2 className="cast-name">{cast.name}</h2>
         </article>

@@ -31,7 +31,7 @@
     }
     .movie-item{
         padding-inline: 4rem;
-        height: auto;
+        height: 100%;
     }
     .movie-item-about-container{
        flex-direction: column-reverse;
@@ -41,5 +41,8 @@
     }
     .movie-item-description{
         width: 96%;
+    }
+    .swiper-slide{
+        height: 100%;
     }
 }

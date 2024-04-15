@@ -9,6 +9,8 @@ import Video from "./Video/Video";
 import SlidingMovieCard from "../SlidingMovieCard/SlidingMovieCard";
 import { Autoplay} from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
 
 export default function MediaItemDetails(){
     const {category, id} = useParams();
@@ -48,7 +50,10 @@ export default function MediaItemDetails(){
          <div className="details-background" style={styleObject}></div>
          <article className="details-card">
              <div className="details-poster-container">
-               <img loading="lazy" src={posterImg} className="details-poster"></img>
+             <LazyLoadImage
+               effect="blur"
+               src={posterImg} 
+            />
             </div>
               <div className="details-card-about">
                  <h2 className="details-card-title">{item?.title || item?.name}</h2>
