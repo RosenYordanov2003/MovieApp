@@ -22,7 +22,18 @@ export default function MediaList(){
       else{
         loadMediaItemsByQueryString(0, false);
       }
-    },[category, queryString])
+    },[queryString]);
+
+    useEffect(() => {
+      setIsLoading(true);
+      setPagerObject({pageNumber: 1, totalPages: 0});
+       loadPopularMediaList(1, category, 'popular')
+       .then(res => {
+        setMediaListItems(res.results);
+        setPagerObject({pageNumber: res.page, totalPages: res.total_pages});
+        setIsLoading(false);
+       })
+    }, [category])
 
     function handleOnLoadMoreClick(){
       if(queryString!== undefined && queryString.length > 0 && pagerObject.pageNumber + 1 <=pagerObject.totalPages){
@@ -40,6 +51,7 @@ export default function MediaList(){
           setMediaListItems([...mediaListItems,...res.results]);
         }
         else{
+          console.log('in else');
           setMediaListItems(res.results);
         }
         setPagerObject({pageNumber: pagerObject.pageNumber + pageNumberToAdd, totalPages: res.total_pages});

@@ -8,7 +8,7 @@ export default function Cast({cast}){
     return (
         <article className="cast-card">
             <div className="cast-img-container">
-                <img src={imgPath}></img>
+                <img loading="lazy" src={imgPath}></img>
             </div>
             <h2 className="cast-name">{cast.name}</h2>
         </article>

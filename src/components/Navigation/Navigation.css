@@ -39,6 +39,7 @@ header.active-header{
 }
 .header-logo i{
     font-size: 2rem;
+    color: red;
 }
 
 .menu-icon-bar {

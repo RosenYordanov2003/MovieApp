@@ -9,7 +9,7 @@ export default function MediaListCard({mediaItem, category}){
    return(
      <article onClick={() => navigate(`/Details/${category}/${mediaItem.id}`)} className="media-item-card">
         <div className="media-item-img-container">
-           <img src={imgPath}></img>
+           <img loading="lazy" src={imgPath}></img>
         </div>
         <div className="media-item-content-container">
            <h3 className="media-item-title">{mediaItem.title ? mediaItem.title : mediaItem.name}</h3>

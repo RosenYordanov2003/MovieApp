@@ -48,7 +48,7 @@ export default function MediaItemDetails(){
          <div className="details-background" style={styleObject}></div>
          <article className="details-card">
              <div className="details-poster-container">
-               <img src={posterImg} className="details-poster"></img>
+               <img loading="lazy" src={posterImg} className="details-poster"></img>
             </div>
               <div className="details-card-about">
                  <h2 className="details-card-title">{item?.title || item?.name}</h2>

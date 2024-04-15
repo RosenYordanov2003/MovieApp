@@ -9,7 +9,7 @@ export default function SlidingMovieCard({movie, category}){
     return(
         <article onClick={() =>navigate(`/Details/${category}/${movie.id}`)} className="sliding-movie-card">
             <div className="sliding-movie-card-img-container">
-                <img src={imgPath}></img>
+                <img loading="lazy" src={imgPath}></img>
             </div>
            <h3 className="sliding-movie-card-name">{movie.title}</h3>
         </article>
