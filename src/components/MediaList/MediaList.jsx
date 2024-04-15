@@ -1,5 +1,6 @@
 import {useParams} from "react-router-dom"
 import "../MediaList/MediaList.css";
+import "../MediaList/MediaListResponsive.css";
 import {loadPopularMediaList, searchCollection} from "../../services/movieService";
 import { useState, useEffect } from "react";
 import MediaListCard from "../MediaListCard/MediaListCard";

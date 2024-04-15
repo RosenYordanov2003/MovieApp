@@ -1,4 +1,5 @@
 import "../MediaListCard/MediaListCard.css";
+import "../MediaListCard/MediaListCardResponsive.css";
 import apiConfig from "../../utilities";
 import {useNavigate} from "react-router-dom"
 

@@ -1,0 +1,27 @@
+@media screen and (max-width: 700px) {
+    .media-item-img-container{
+        width: 94%;
+    }
+    .load-more-button{
+        margin-left: unset;
+        width: 90%;
+        border-radius: 1.5rem;
+    }
+    .media-item-title{
+        font-size: 1.4rem;
+    }
+}
+@media screen and (min-width: 701px) and (max-width: 1000px) {
+    .media-item-img-container{
+        width: 100%;
+    }
+    .load-more-button{
+        margin-left: unset;
+        width: 70%;
+        border-radius: 1.5rem;
+    }
+    .media-item-title{
+        font-size: 1.5rem;
+    }
+}
+
