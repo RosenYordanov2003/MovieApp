@@ -31,7 +31,6 @@
     }
     .movie-item{
         padding-inline: 4rem;
-        height: 100%;
     }
     .movie-item-about-container{
        flex-direction: column-reverse;

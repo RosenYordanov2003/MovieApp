@@ -13,7 +13,7 @@ export default function MediaListCard({mediaItem, category}){
         <div className="media-item-img-container">
          <LazyLoadImage
            effect="blur"
-           src={imgPath} 
+           src={imgPath}
          />
         </div>
         <div className="media-item-content-container">
